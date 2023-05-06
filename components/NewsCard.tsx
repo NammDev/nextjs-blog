@@ -10,7 +10,15 @@ export default function NewsCard({ article }: INewsCardProps) {
   return (
     <div className='max-w bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
       <a href='#'>
-        <Image width={500} height={500} className='rounded-t-lg' src={article.urlToImage} alt='' />
+        {article.urlToImage && (
+          <Image
+            width={500}
+            height={500}
+            className='rounded-t-lg'
+            src={article.urlToImage}
+            alt=''
+          />
+        )}
       </a>
       <div className='p-5'>
         <a href='#'>
